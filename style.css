@@ -1,0 +1,121 @@
+:root {
+   --bgcolor1: #1BE7FF;
+   --bgcolor2: #6EEB83;
+   --bgcolor3: #E4FF1A;
+   --bgcolor4: #E8AA14;
+   --bgcolor5: #ff5714;
+   --bgcolor5opaque: #ff571498;
+
+   
+   --bgcolor1-dark: #0CAADC;
+   --bgcolor2-dark: #11B5E4;
+   --bgcolor3-dark: #1481BA  ;
+   --bgcolor4-dark: #034748;
+   --bgcolor5-dark: #001021;
+   --bgcolor5opaque-dark: #00102198;
+}
+* {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    transition: 0.1s;
+}
+
+body {
+    background-color: var(--bgcolor4);
+    font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow:hidden;
+}
+
+h1 {    
+    margin: 2vmin auto;
+}
+
+.game {
+    display: grid;
+    margin: auto;
+    height: 55vmin;
+    width: 55vmin;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1.25vmin;
+}
+
+.box {
+    background-color: var(--bgcolor2);
+    border: none;
+    font-size: 10vmin;
+    color: var(--bgcolor5);
+    border-radius: 2.5vmin;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    font-family: inherit;
+}
+
+.reset {
+    background-color: black;
+    color: white;
+    border-radius: 5vmin;
+    padding: 1vmin;
+    margin: 2vmin;
+    height: 7.5vmin;
+    width: 20vmin;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    font-family: inherit;
+    font-size: 2.5vmin;
+}
+
+button {
+    transition: 0.1s;
+}
+
+button:active {
+    transform: scale(1.02);
+}
+
+.new-game {
+    background-color: black;
+    color: white;
+    border-radius: 5vmin;
+    padding: 1vmin;
+    height: 7.5vmin;
+    width: 20vmin;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    font-family: inherit;
+    font-size: 2.5vmin;
+}
+
+.msg {
+    font-size: 5vmin;
+    color: #ffffc7;
+    font-family: monospace;
+    margin: 2vmin 0;
+}
+
+.hide {
+    display: none;
+}
+
+.msg-container {
+    margin: 2vmin auto;
+    padding: 1vmin;
+    width: 50%;
+    border-radius: 5vmin;
+    background-color: var(--bgcolor5opaque);
+    border: 1.5px solid var(--bgcolor5);
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        background-color: var(--bgcolor4-dark);
+    }
+    .box {
+        background-color: var(--bgcolor2-dark);
+        color: var(--bgcolor5-dark);
+    }
+    .msg-container {
+        background-color: var(--bgcolor5opaque-dark);
+        border: 1.5px solid var(--bgcolor5-dark);   
+    }
+}
